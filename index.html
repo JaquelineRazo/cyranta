@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CYRANTA | Data that can build anything</title>
+	<meta name="description" content="CYRANTA curates, builds and licenses exclusive industry data for AI training, research and market analysis. Start with a free Industry Opportunity Snapshot.">
+	<meta name="robots" content="noindex">
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/cyranta.css">
+	<script type="importmap">
+	{ "imports": {
+		"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+		"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+	} }
+	</script>
+</head>
+<body>
+	<a class="skip" href="#main">Skip to content</a>
+
+	<!-- The swarm: a fixed layer behind the copy, above section backgrounds. -->
+	<canvas class="swarm" data-swarm aria-hidden="true"></canvas>
+	<p class="hud" data-hud aria-hidden="true"></p>
+
+	<header class="nav">
+		<div class="nav-inner">
+			<a class="logo" href="#top" aria-label="CYRANTA home">CYRANTA</a>
+			<nav aria-label="Main">
+				<ul class="nav-links">
+					<li><a href="#curation">Curation</a></li>
+					<li><a href="#datasets">Datasets</a></li>
+					<li><a href="#cleanrooms">Clean rooms</a></li>
+					<li><a href="#snapshot">Snapshot</a></li>
+					<li><a href="#faq">FAQ</a></li>
+				</ul>
+			</nav>
+			<a class="btn btn--ink btn--sm" href="#contact">Request a Snapshot</a>
+		</div>
+	</header>
+
+	<main id="main">
+		<section class="scene" id="top" data-scene="hero" data-side="right">
+			<div class="wrap">
+				<div class="copy copy--hero">
+					<p class="eyebrow">Data intelligence</p>
+					<h1>Data that can build anything.</h1>
+					<p class="lede">CYRANTA curates, builds and licenses exclusive industry data for AI training, research and market analysis.</p>
+					<div class="actions">
+						<a class="btn btn--ink" href="#contact">Request a free Snapshot</a>
+						<a class="btn btn--glass" href="https://tidycal.com/jaquelinerazzo/20-minute-meeting" target="_blank" rel="noopener">Book a call</a>
+					</div>
+					<p class="micro">Free Industry Opportunity Snapshot · Exclusive datasets · Clean rooms on AWS</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="scene" data-scene="problem" data-side="right">
+			<div class="wrap">
+				<div class="copy">
+					<p class="eyebrow">The problem</p>
+					<h2>On its own, a data point is nothing.</h2>
+					<p>Most information arrives scattered, duplicated and without context. Before it can train a model or answer a question, someone has to find it, clean it and connect it.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="scene" id="curation" data-scene="curation" data-side="left">
+			<div class="wrap">
+				<div class="copy">
+					<p class="eyebrow"><span class="num">01</span> Data curation</p>
+					<h2>Clean, connected, documented.</h2>
+					<p>We remove duplicates and noise, normalize formats, label what matters and document every batch, so your team starts from data it can trust.</p>
+					<ul class="chips"><li>Deduplication</li><li>Normalization</li><li>Labeling</li><li>Privacy by design</li></ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="scene" id="datasets" data-scene="datasets" data-side="right">
+			<div class="wrap">
+				<div class="copy">
+					<p class="eyebrow"><span class="num">02</span> Exclusive datasets</p>
+					<h2>One dataset. One buyer.</h2>
+					<p>Every dataset we build is licensed to a single buyer. What trains your model doesn't train your competitor's.</p>
+					<ul class="chips"><li>Industry datasets</li><li>Responsibly sourced</li><li>Exclusive license</li></ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="scene scene--top" id="algorithms" data-scene="algorithms" data-side="below">
+			<div class="wrap">
+				<div class="copy copy--center">
+					<p class="eyebrow"><span class="num">03</span> Algorithms &amp; pipelines</p>
+					<h2>Data that keeps itself fresh.</h2>
+					<p>We build the algorithms and pipelines that collect, transform, classify and refresh your data on schedule.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="scene scene--dark" id="cleanrooms" data-scene="cleanrooms" data-side="right">
+			<div class="wrap">
+				<div class="copy">
+					<p class="eyebrow"><span class="num">04</span> Data clean rooms</p>
+					<h2>Collaborate without sharing.</h2>
+					<p>Clean rooms on AWS let two or more parties analyze data together while each side's raw data stays private. Only the agreed results come out.</p>
+					<ul class="chips chips--dark"><li>AWS Clean Rooms</li><li>Privacy-safe joins</li><li>Agreed outputs only</li></ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="scene" id="snapshot" data-scene="snapshot" data-side="right">
+			<div class="wrap">
+				<div class="copy">
+					<p class="eyebrow">Free · Industry Opportunity Snapshot</p>
+					<h2>Try the data before you buy it.</h2>
+					<p>Like a model demo, the Snapshot lets you test what we can build for your industry, at no cost.</p>
+					<div class="card glass" aria-label="Sample data card, illustrative">
+						<p class="card-tag">Sample data · Illustrative</p>
+						<dl class="datacard">
+							<div><dt>Industry</dt><dd>Construction</dd></div>
+							<div><dt>Includes</dt><dd>Sample dataset · Model demo · Refresh run</dd></div>
+							<div><dt>Format</dt><dd>Parquet · JSONL · CSV</dd></div>
+							<div><dt>Refresh</dt><dd>Weekly</dd></div>
+							<div><dt>Duplicates</dt><dd>Removed</dd></div>
+							<div><dt>Personal data</dt><dd>Removed</dd></div>
+							<div><dt>License</dt><dd>Exclusive</dd></div>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="scene scene--top" data-scene="how" data-side="below">
+			<div class="wrap">
+				<div class="copy copy--center">
+					<p class="eyebrow">How it works</p>
+					<h2>From first call to fresh data.</h2>
+				</div>
+				<ol class="steps">
+					<li class="glass"><span class="num">01</span><strong>Call</strong><span>20 minutes on your use case and industry.</span></li>
+					<li class="glass"><span class="num">02</span><strong>Free Snapshot</strong><span>A sample, a demo or a refresh run you can test.</span></li>
+					<li class="glass"><span class="num">03</span><strong>Scope</strong><span>A written proposal and an exclusive license.</span></li>
+					<li class="glass"><span class="num">04</span><strong>Deliver</strong><span>Data, documentation and scheduled refreshes.</span></li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="scene" id="faq" data-scene="faq" data-side="right">
+			<div class="wrap">
+				<div class="copy">
+					<p class="eyebrow">FAQ</p>
+					<h2>Questions, answered.</h2>
+					<div class="faq">
+						<details><summary>Is the Snapshot really free?</summary><p>Yes. It works like a model demo: you test the data before you decide to buy.</p></details>
+						<details><summary>Are the datasets exclusive?</summary><p>Yes. Each dataset is licensed to a single buyer.</p></details>
+						<details><summary>What formats do you deliver?</summary><p>Parquet, JSONL or CSV, or the format your pipeline already uses.</p></details>
+						<details><summary>How do you handle our data?</summary><p>We sign an NDA before we see any of your data, and our clients' data never appears on this site. That's the point.</p></details>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="scene" id="contact" data-scene="contact" data-side="left">
+			<div class="wrap">
+				<div class="copy">
+					<p class="eyebrow">Start here</p>
+					<h2>Let's build your dataset.</h2>
+					<form class="form glass" data-proto-form>
+						<div class="row">
+							<label>Your name<input name="name" autocomplete="name" required></label>
+							<label>Work email<input name="email" type="email" autocomplete="email" required></label>
+						</div>
+						<label>Organization<input name="company" autocomplete="organization"></label>
+						<div class="row">
+							<label>You are
+								<select name="buyer"><option>AI training</option><option>Research</option><option>Industry analysis</option><option>Other</option></select>
+							</label>
+							<label>You need
+								<select name="need"><option>Free Snapshot</option><option>Exclusive dataset</option><option>Data curation</option><option>Algorithms &amp; pipelines</option><option>Clean room</option><option>Not sure yet</option></select>
+							</label>
+						</div>
+						<label>Industry and use case<textarea name="comments" rows="3"></textarea></label>
+						<button class="btn btn--ink" type="submit">Request a free Snapshot</button>
+						<p class="form-note" data-proto-note>Prototype: this form doesn't send yet.</p>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="wrap footer-inner">
+			<span class="logo">CYRANTA</span>
+			<span>© 2026 CYRANTA</span>
+			<a href="#">Privacy</a>
+			<a href="mailto:cyranta@razzobusiness.com">cyranta@razzobusiness.com</a>
+		</div>
+	</footer>
+
+	<script src="js/cyranta.js"></script>
+</body>
+</html>
