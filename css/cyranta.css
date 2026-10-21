@@ -490,4 +490,6 @@ p { margin: 0 0 16px; color: var(--muted); }
 	.form .row { grid-template-columns: 1fr; }
 	.hud { display: none; }
 	.footer-tag { margin-left: 0; }
+	/* Legible minimum on phones. */
+	.code, .ticker a, .window-bar, .window-bar em, .label, .table, .checks li, .tabs button, .form label, .form-note, .datacard, .specs dt, .demo-in span, .demo-out dt, .stages .num, .steps .num { font-size: 12px; }
 }
