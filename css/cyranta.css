@@ -12,7 +12,6 @@
 	--graphite-2: #1B1D22;
 	--display: 'Martian Mono', ui-monospace, monospace;
 	--font: 'Geist', system-ui, -apple-system, sans-serif;
-	--chrome: linear-gradient(180deg, #121317 0%, #3D424A 34%, #A3A9B2 50%, #2A2D33 60%, #121317 100%);
 	--chrome-light: linear-gradient(180deg, #FFFFFF 0%, #C9CDD3 38%, #FFFFFF 52%, #8E949C 70%, #E6E8EB 100%);
 	--metal: linear-gradient(180deg, #3A3E46 0%, #1A1C21 55%, #0E0F12 100%);
 	--brushed: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.28) 0 1px, rgba(255, 255, 255, 0) 1px 3px);
@@ -200,7 +199,6 @@ body::before {
 .scene--dark::before, .scene--dark::after { color: rgba(255, 255, 255, 0.3); }
 .scene--dark p:not(.label) { color: #B4BAC2; }
 .scene--dark .label { color: #9AA0A8; }
-.scene--dark .chrome { background-image: var(--chrome-light); }
 
 .wrap { position: relative; z-index: 2; width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 32px; }
 .copy { max-width: 540px; }
@@ -229,14 +227,25 @@ h1, h2 {
 	letter-spacing: -0.065em;
 	line-height: 1.02;
 }
-h1 { font-size: clamp(44px, 6.4vw, 92px); max-width: 9.6ch; }
+h1 { font-size: clamp(44px, 6.4vw, 92px); max-width: 10ch; }
 h2 { font-size: clamp(30px, 3.5vw, 50px); }
-.chrome {
-	background-image: var(--chrome);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
+.accent { color: rgb(39 161 0 / 75%); }
+
+/* Hero: "anything." types itself, with a blinking block caret. */
+.typed { display: inline-block; min-width: 9ch; }
+.typed::after {
+	content: '';
+	display: inline-block;
+	width: 0.5ch;
+	height: 0.82em;
+	margin-left: 0.06em;
+	vertical-align: -0.04em;
+	background: rgb(39 161 0 / 75%);
+	animation: caret 1s steps(1) infinite;
 }
+@keyframes caret { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .typed::after { animation: none; } }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 p { margin: 0 0 16px; color: var(--muted); }
 .lede { font-size: 20px; line-height: 2; color: var(--ink); max-width: 600px; }
 .pill {
@@ -417,6 +426,9 @@ p { margin: 0 0 16px; color: var(--muted); }
 	letter-spacing: -0.04em;
 	text-align: center;
 	background-image: var(--chrome-light);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 	opacity: 0.9;
 }
 .footer-row { display: flex; flex-wrap: wrap; gap: 28px; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); font: 400 12px/1 var(--display); }

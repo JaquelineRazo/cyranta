@@ -13,6 +13,20 @@
 	if (document.readyState === 'complete') { start(); } else { window.addEventListener('load', start); }
 })();
 
+// Hero: type "anything." once the page is ready (static with reduced motion).
+(function () {
+	var el = document.querySelector('[data-typed]');
+	if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
+	var text = el.getAttribute('data-typed');
+	var i = 0;
+	el.textContent = '';
+	function type() {
+		el.textContent = text.slice(0, ++i);
+		if (i < text.length) { setTimeout(type, 95 + Math.random() * 70); }
+	}
+	setTimeout(type, 700);
+})();
+
 // Illustrations fade in (and quality bars fill) when they reach the screen.
 (function () {
 	var items = document.querySelectorAll('.reveal');
