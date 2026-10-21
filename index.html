@@ -5,12 +5,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>CYRANTA | Data that can build anything</title>
 	<meta name="description" content="CYRANTA curates, builds and licenses exclusive industry data for AI training, research and market analysis. Start with a free Industry Opportunity Snapshot.">
-	<meta name="robots" content="noindex">
+	<link rel="canonical" href="https://cyranta.razzobusiness.com/">
+	<meta name="theme-color" content="#ECEEF1">
+	<meta property="og:title" content="CYRANTA | Data that can build anything">
+	<meta property="og:description" content="Exclusive industry datasets, data curation, pipelines and clean rooms on AWS for AI training, research and market analysis. Start with a free Snapshot.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://cyranta.razzobusiness.com/">
+	<meta property="og:image" content="https://cyranta.razzobusiness.com/assets/og.jpg">
+	<meta property="og:site_name" content="CYRANTA">
+	<meta name="twitter:card" content="summary_large_image">
 	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "CYRANTA",
+		"url": "https://cyranta.razzobusiness.com/",
+		"slogan": "Data that can build anything.",
+		"description": "CYRANTA is a data intelligence company that curates, builds and licenses exclusive industry datasets, implements data pipelines and sets up data clean rooms on AWS for AI training teams, researchers and industry analysts.",
+		"email": "cyranta@razzobusiness.com",
+		"makesOffer": [
+			{ "@type": "Offer", "name": "Industry Opportunity Snapshot", "price": "0", "priceCurrency": "USD", "description": "A free sample dataset, model demo or data refresh run to test before buying." },
+			{ "@type": "Offer", "name": "Exclusive datasets", "description": "Curated industry datasets licensed to a single buyer." },
+			{ "@type": "Offer", "name": "Data curation", "description": "Deduplication, normalization, labeling and documentation." },
+			{ "@type": "Offer", "name": "Algorithms and pipelines", "description": "Collection, transformation, classification and scheduled refreshes." },
+			{ "@type": "Offer", "name": "Data clean rooms", "description": "Privacy-safe data collaboration on AWS." }
+		]
+	}
+	</script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,300..700&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/cyranta.css">
+	<!-- Umami Cloud (same account as the other sites; cookieless). -->
+	<script defer src="https://cloud.umami.is/script.js" data-website-id="6c3dd0af-b54d-4f12-9451-df9b2046e7c4" data-domains="cyranta.razzobusiness.com"></script>
 	<script type="importmap">
 	{ "imports": {
 		"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
@@ -51,7 +79,7 @@
 					<li><a href="#faq">FAQ</a></li>
 				</ul>
 			</nav>
-			<a class="btn btn--metal btn--sm btn--handles" href="#contact">Request a Snapshot</a>
+			<a class="btn btn--metal btn--sm btn--handles" href="#contact" data-umami-event="snapshot-cta" data-umami-event-location="nav">Request a Snapshot</a>
 		</div>
 	</header>
 
@@ -68,8 +96,8 @@
 						<span class="pill"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="2.5" width="11" height="11" rx="2"/><path d="M8 2.5v11"/></svg>clean rooms</span>
 						for AI training, research and market analysis.</p>
 					<div class="actions">
-						<a class="btn btn--metal btn--handles" href="#contact">Request a free Snapshot</a>
-						<a class="btn btn--line" href="https://tidycal.com/jaquelinerazzo/20-minute-meeting" target="_blank" rel="noopener">Book a call</a>
+						<a class="btn btn--metal btn--handles" href="#contact" data-umami-event="snapshot-cta" data-umami-event-location="hero">Request a free Snapshot</a>
+						<a class="btn btn--line" href="https://tidycal.com/jaquelinerazzo/20-minute-meeting" target="_blank" rel="noopener" data-umami-event="book-call" data-umami-event-location="hero">Book a call</a>
 					</div>
 				</div>
 			</div>
@@ -285,28 +313,33 @@
 					<p class="label"><span class="bracket">┤</span> Start here <span class="bracket">├</span></p>
 					<h2>Let's build <span class="accent">your dataset.</span></h2>
 					<p>Tell us your industry and use case.</p>
-					<form class="form window" data-proto-form>
+					<form class="form window" id="contact-form" action="https://razzo-forms.razzo-forms.workers.dev/" method="POST" novalidate>
 						<div class="window-bar"><i></i><i></i><i></i><span>request · snapshot</span></div>
 						<div class="form-body">
+							<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+							<input type="hidden" name="intent" value="data">
+							<input type="hidden" name="brand" value="cyranta">
+							<input type="hidden" name="source" value="">
 							<div class="row">
-								<label>Your name<input name="name" autocomplete="name" required></label>
-								<label>Work email<input name="email" type="email" autocomplete="email" required></label>
+								<label class="field">Your name<input name="name" autocomplete="name" required></label>
+								<label class="field">Work email<input name="email" type="email" autocomplete="email" required></label>
 							</div>
-							<label>Organization<input name="company" autocomplete="organization"></label>
+							<label class="field">Organization<input name="company" autocomplete="organization"></label>
 							<div class="row">
-								<label>You are
-									<select name="buyer"><option>AI training</option><option>Research</option><option>Industry analysis</option><option>Other</option></select>
+								<label class="field">You are
+									<select name="buyer"><option value="training">AI training</option><option value="research">Research</option><option value="analysis">Industry analysis</option><option value="other">Other</option></select>
 								</label>
-								<label>You need
-									<select name="need"><option>Free Snapshot</option><option>Exclusive dataset</option><option>Data curation</option><option>Algorithms &amp; pipelines</option><option>Clean room</option><option>Not sure yet</option></select>
+								<label class="field">You need
+									<select name="need"><option value="snapshot">Free Snapshot</option><option value="dataset">Exclusive dataset</option><option value="curation">Data curation</option><option value="pipelines">Algorithms &amp; pipelines</option><option value="cleanroom">Clean room</option><option value="unsure">Not sure yet</option></select>
 								</label>
 							</div>
-							<label>Industry and use case<textarea name="comments" rows="3"></textarea></label>
+							<label class="field">Industry and use case<textarea name="comments" rows="3" required></textarea></label>
 							<div class="form-actions">
 								<button class="btn btn--metal btn--handles" type="submit">Request a free Snapshot</button>
-								<a class="btn btn--line" href="https://tidycal.com/jaquelinerazzo/20-minute-meeting" target="_blank" rel="noopener">Book a call</a>
+								<a class="btn btn--line" href="https://tidycal.com/jaquelinerazzo/20-minute-meeting" target="_blank" rel="noopener" data-umami-event="book-call" data-umami-event-location="contact">Book a call</a>
 							</div>
-							<p class="form-note" data-proto-note>Prototype: this form doesn't send yet.</p>
+							<p class="form-status" role="status" aria-live="polite"></p>
+							<p class="form-note">We'll only use your details to reply to you. See the <a href="privacy.html">Privacy Notice</a>.</p>
 						</div>
 					</form>
 				</div>
@@ -319,7 +352,7 @@
 			<p class="footer-mark" aria-hidden="true">CYRANTA</p>
 			<div class="footer-row">
 				<span>© 2026 CYRANTA</span>
-				<a href="#">Privacy</a>
+				<a href="privacy.html">Privacy</a>
 				<a href="mailto:cyranta@razzobusiness.com">cyranta@razzobusiness.com</a>
 				<span class="footer-tag">Data that can build anything.</span>
 			</div>

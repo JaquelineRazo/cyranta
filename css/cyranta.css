@@ -229,7 +229,7 @@ h1, h2 {
 }
 h1 { font-size: clamp(44px, 6.4vw, 92px); max-width: 10ch; }
 h2 { font-size: clamp(30px, 3.5vw, 50px); }
-.accent { color: rgb(39 161 0 / 75%); }
+.accent { color: #1F7F00; }
 
 /* Hero: "anything." types itself, with a blinking block caret. */
 .typed { display: inline-block; min-width: 9ch; }
@@ -240,7 +240,7 @@ h2 { font-size: clamp(30px, 3.5vw, 50px); }
 	height: 0.82em;
 	margin-left: 0.06em;
 	vertical-align: -0.04em;
-	background: rgb(39 161 0 / 75%);
+	background: #1F7F00;
 	animation: caret 1s steps(1) infinite;
 }
 @keyframes caret { 50% { opacity: 0; } }
@@ -415,7 +415,25 @@ p { margin: 0 0 16px; color: var(--muted); }
 	width: 100%;
 }
 .form-actions { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 8px; padding-left: 6px; }
-.form-note { font: 400 11px/1.4 var(--display); margin: 0; }
+.form-note { font: 400 11px/1.5 var(--display); margin: 0; }
+.form-note a { color: var(--ink); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.field.is-invalid input, .field.is-invalid textarea { border-color: #B42318; }
+.form-status { margin: 0; font: 400 12.5px/1.5 var(--display); color: #1F7F00; }
+.form-status:empty { display: none; }
+.form-status.is-error { color: #B42318; }
+.form-status a { color: inherit; }
+.form.is-sent .row, .form.is-sent > .form-body > .field, .form.is-sent .form-actions { display: none; }
+
+/* Privacy and 404 pages */
+.page { position: relative; z-index: 2; padding: 170px 0 90px; }
+.page .wrap { max-width: 820px; }
+.legal h2 { font-size: clamp(22px, 2.4vw, 28px); margin: 44px 0 12px; }
+.legal ul { color: var(--muted); padding-left: 20px; }
+.legal li { margin-bottom: 8px; }
+.legal a { color: var(--ink); }
+.lang-switch { font: 400 12px/1 var(--display); }
+.lost { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 120px 16px 60px; }
 
 /* Footer: a large chrome wordmark, luxury-car style. */
 .footer { position: relative; z-index: 2; padding: 70px 0 34px; background: var(--graphite); color: #9AA0A8; overflow: hidden; }

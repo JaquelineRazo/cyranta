@@ -1,0 +1,30 @@
+# CYRANTA
+
+> CYRANTA is a data intelligence company that curates, builds and licenses exclusive industry datasets, implements data pipelines and sets up data clean rooms on AWS for AI training teams, researchers and industry analysts.
+
+Tagline: Data that can build anything.
+
+## Start here
+
+- Industry Opportunity Snapshot (free): a sample dataset, a model demo or a data refresh run, plus a data card, so buyers can test the data before they buy.
+
+## Services
+
+- Exclusive datasets: curated industry datasets, each licensed to a single buyer.
+- Data curation: deduplication, normalization, labeling, personal data removal and batch documentation.
+- Algorithms and pipelines: collection, transformation, classification and scheduled refreshes, with a log of every run.
+- Data clean rooms on AWS: two or more parties analyze data together while each side's raw data stays private; only agreed outputs come out.
+
+## Formats
+
+Parquet, JSONL or CSV, or the format the buyer's pipeline already uses.
+
+## Confidentiality
+
+CYRANTA signs an NDA before reviewing any client data. Client data never appears on the website.
+
+## Contact
+
+- [Request a free Snapshot](https://cyranta.razzobusiness.com/#contact)
+- [Book a 20-minute call](https://tidycal.com/jaquelinerazzo/20-minute-meeting)
+- Email: cyranta@razzobusiness.com
